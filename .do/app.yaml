@@ -8,7 +8,7 @@ services:
     dockerfile_path: Dockerfile
     source_dir: /
     github:
-      repo: your-user/horizon
+      repo: bhushanvidhate-27/horizon
       branch: main
       deploy_on_push: true
     http_port: 8080

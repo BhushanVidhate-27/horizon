@@ -10,17 +10,17 @@ you agree to uphold it.
 ## Ways to help
 
 - 🐛 **Report a bug** or 📈 **request a feature** via
-  [issues](https://github.com/your-user/horizon/issues).
+  [issues](https://github.com/bhushanvidhate-27/horizon/issues).
 - 📖 **Improve the docs** — the README and `docs/` are part of the product.
 - 🧪 **Add tests** — the suite is fully offline and fast.
 - ✨ **Build something from the [Future improvements](../README.md#-future-improvements) list.**
 
-Good first issues are labelled [`good first issue`](https://github.com/your-user/horizon/labels/good%20first%20issue).
+Good first issues are labelled [`good first issue`](https://github.com/bhushanvidhate-27/horizon/labels/good%20first%20issue).
 
 ## Development setup
 
 ```bash
-git clone https://github.com/your-user/horizon && cd horizon
+git clone https://github.com/bhushanvidhate-27/horizon && cd horizon
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 pip install pytest pytest-cov ruff

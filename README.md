@@ -1,6 +1,6 @@
 # 🌇 Horizon
 
-[![CI](https://github.com/your-user/horizon/actions/workflows/ci.yml/badge.svg)](https://github.com/your-user/horizon/actions/workflows/ci.yml)
+[![CI](https://github.com/bhushanvidhate-27/horizon/actions/workflows/ci.yml/badge.svg)](https://github.com/bhushanvidhate-27/horizon/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](pyproject.toml)
 [![Tests](https://img.shields.io/badge/tests-84%20passing-brightgreen.svg)](#-tests)
@@ -12,7 +12,9 @@ then nudges you to put the phone away and actually go look.
 It's built with the **"Touch Grass"** spirit: a short interaction that leads to
 a real-world experience. Ask once, then leave your phone in your pocket.
 
-> Submission for **Hacktoberfest 2026 — Open-Source AI Challenge, Week 1: Touch Grass.**
+> Submission for **Hacktoberfest 2026 — Open-Source AI Challenge, Week 1: Touch Grass**.
+> Brand-new project, built within the challenge window (Oct 5–11, 2026). Any commits
+> after the Oct 11, 2026 11:59 PM PDT deadline will be noted here as required.
 
 ![Horizon web UI](docs/screenshot.svg)
 
@@ -317,7 +319,7 @@ All variables live in `.env` (see `.env.example`). Highlights:
 Contributions are welcome and genuinely appreciated — from typo fixes to new
 astronomy data. Start with [`CONTRIBUTING.md`](CONTRIBUTING.md); good first
 tasks are labelled
-[`good first issue`](https://github.com/your-user/horizon/labels/good%20first%20issue).
+[`good first issue`](https://github.com/bhushanvidhate-27/horizon/labels/good%20first%20issue).
 If you're preparing the challenge entry itself, follow
 [`docs/SUBMISSION_CHECKLIST.md`](docs/SUBMISSION_CHECKLIST.md).
 

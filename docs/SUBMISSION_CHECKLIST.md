@@ -8,8 +8,12 @@ Open-Source AI Challenge (Week 1: Touch Grass)** and onto DEV.
 
 ## 1. Repository
 
-- [ ] `git init` and push a public GitHub repo named `horizon`.
-- [ ] Fill the placeholders (`<your-user>`) in `README.md` and
+- [x] `git init` and push a public GitHub repo named `horizon` (owner:
+      `bhushanvidhate-27` — already set as `bhushanvidhate-27/horizon` in
+      every badge, link and spec).
+- [ ] **Verify the live URL once Render deploys**: the demo links currently say
+      `https://horizon-bhushanvidhate-27.onrender.com` — replace that subdomain
+      with the exact one Render assigns in `README.md` and
       `docs/DEV_SUBMISSION.md`.
 - [ ] The repo shows the **MIT** license and a green CI badge.
 - [ ] Add topics: `hacktoberfest`, `touch-grass`, `astronomy`, `fastapi`,
@@ -31,40 +35,51 @@ make run            # http://localhost:8000
 
 ## 3. Deploy (pick at least one — they are prize categories)
 
-- [ ] **Render**: *New +* → *Blueprint* → select `render.yaml`.
-- [ ] **DigitalOcean**: `doctl apps create --spec .do/app.yaml`.
+- [x] **Render**: *New +* → *Blueprint* → select `render.yaml` *(this is the
+      live demo)*.
+- [ ] **DigitalOcean** *(optional, easiest $200 category this week — only
+      ~2 rivals)*: `doctl apps create --spec .do/app.yaml`, then point the
+      live demo there instead.
 - [ ] Copy the live URL into `README.md` and `docs/DEV_SUBMISSION.md`.
 - [ ] Set partner secrets in the host dashboard (they are marked secret in both
       specs) — never commit them.
 
 ## 4. Capture media
 
-- [ ] Replace `docs/screenshot.svg` if the UI has changed (or export a PNG).
+- [ ] The screenshot for DEV is already exported at **`docs/screenshot.png`**
+      (1200px wide). To regenerate: `qlmanage -t -s 1600 -o /tmp docs/screenshot.svg
+      && mv /tmp/screenshot.svg.png docs/screenshot.png`. Upload it into the post
+      (DEV can't upload SVG).
 - [ ] Record a **short (20–40s) screen capture** of one tap → the alert.
       This *is* the "Touch Grass" story: short interaction, real-world payoff.
 - [ ] Keep the video unlisted/embeddable (YouTube, Loom, or a GIF in the repo).
 
 ## 5. DEV submission post
 
-Use `docs/DEV_SUBMISSION.md` as the draft. It already contains:
+Use `docs/DEV_SUBMISSION.md` as the draft. It already contains every
+**template section** in order:
 
-- [ ] **What I built** and **who it's for**.
+- [ ] **What I Built** and **Who It's For**.
 - [ ] **Demo**: live link + screenshot + looped sample output.
-- [ ] **How it works** (the stage table) and the open-source/weight story.
+- [ ] **Code**: embedded GitHub repo + quick repo tour.
+- [ ] **How I Built It** (the stage table) and the open-source/weight story.
+- [ ] **Why Does Open Innovation Matter?**
+- [ ] **My Agent Session** link (the OpenCode / DevRelay session that built it).
 - [ ] **Prize Categories** with the exact category names.
-- [ ] **The agent session** link (the prompt/session that built it).
 
-Post tagline / frontmatter:
+Frontmatter (already at the top of the draft):
 
 ```
 title: 🌇 Horizon — the best time to step outside, and what the sky has waiting
-tags: hacktoberfest, devchallenge, hf26challenge, opensource, ai
+published: false
+tags: devchallenge, hf26challenge, opensource, ai
 ```
 
-- [ ] Add the required hashtags: `#hf26challenge` `#devchallenge`
-      `#hacktoberfest` `#opensource` `#ai`.
+- [ ] Required hashtags are present in the body: `#hf26challenge`
+      `#devchallenge` (`#opensource` `#ai` as bonus).
+- [ ] Set `published: true` (before the deadline) and verify the post renders —
+      images must upload, GitHub embed must show the repo card.
 - [ ] Cross-post the link back into the submission discussion thread.
-- [ ] Double-check the post renders (images upload, code blocks fenced).
 
 ## 6. Final sanity pass
 
@@ -72,3 +87,5 @@ tags: hacktoberfest, devchallenge, hf26challenge, opensource, ai
 - [ ] No secrets in `git log` (`git grep -iE "sk-|api_key=|mongodb\+srv" $(git rev-list --all)`).
 - [ ] `.cache/`, `.venv/`, `.env` are **not** committed (see `.gitignore`).
 - [ ] Repo README opens with a screenshot a human can see in the first screen.
+- [ ] Post-deadline commits (if any) noted at the top of the README as required
+      by the [rules](https://dev.to/challenges/hacktoberfest-week1-2026-10-05).
