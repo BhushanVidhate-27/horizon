@@ -64,7 +64,9 @@ Use `docs/DEV_SUBMISSION.md` as the draft. It already contains every
 - [ ] **Code**: embedded GitHub repo + quick repo tour.
 - [ ] **How I Built It** (the stage table) and the open-source/weight story.
 - [ ] **Why Does Open Innovation Matter?**
-- [ ] **My Agent Session** link (the OpenCode / DevRelay session that built it).
+- [ ] **My Agent Session**: save the build session to DEV with
+      [DevRelay](https://devrelay.com) and replace `YOUR_SESSION_ID_OR_SLUG` in
+      `{% agent_session ... %}` (or delete the line to skip it).
 - [ ] **Prize Categories** with the exact category names.
 
 Frontmatter (already at the top of the draft):

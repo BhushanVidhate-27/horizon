@@ -10,6 +10,9 @@ tags: devchallenge, hf26challenge, opensource, ai
      exact subdomain Render assigned when you deploy the blueprint.
   3. Drag `docs/screenshot.svg` (or the exported `docs/screenshot.png`) into the editor
      here — DEV renders uploaded images from its own CDN.
+  4. Optional but recommended: save this build session to DEV with DevRelay
+     (https://devrelay.com), then replace `YOUR_SESSION_ID_OR_SLUG` in the
+     `{% agent_session %}` tag in "My Agent Session". If you skip it, delete that tag line.
 -->
 
 > **This is a submission for the [Hacktoberfest Open-Source AI Challenge, Week 1: Touch Grass](https://dev.to/challenges/hacktoberfest-week1-2026-10-05).**
@@ -172,9 +175,10 @@ Horizon was built in a single agent session — every module above was written,
 tested and iterated on from one OpenCode session, and the repository history
 plus this write-up cover the same steps end to end.
 
-> **Agent session:** `<paste your OpenCode / DevRelay session link here>`
->
-> *(Optional but recommended — judges love seeing the process.)*
+If you'd like to watch the process, the build session is saved to DEV as an
+agent transcript:
+
+{% agent_session YOUR_SESSION_ID_OR_SLUG %}
 
 ## Prize Categories
 
