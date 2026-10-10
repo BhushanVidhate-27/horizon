@@ -1,0 +1,288 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 2600" width="1100" height="2600" role="img" aria-label="Horizon UI: immersive sky gradient with a daily alert, an interactive sky calendar of important events, a tappable hourly outlook and expandable glass detail tiles">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#241a3f"/>
+      <stop offset="0.5" stop-color="#6a3f6e"/>
+      <stop offset="1" stop-color="#e8a06b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.7" cy="0.05" r="0.5">
+      <stop offset="0" stop-color="#ffd0a0" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#ffd0a0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cta" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffe6a8"/>
+      <stop offset="1" stop-color="#ff9f5a"/>
+    </linearGradient>
+    <style>
+      .glass { fill: #ffffff; fill-opacity: 0.12; stroke: #ffffff; stroke-opacity: 0.18; }
+      .glass-soft { fill: #ffffff; fill-opacity: 0.08; stroke: #ffffff; stroke-opacity: 0.18; }
+      .ink { fill: #ffffff; }
+      .soft { fill: #ffffff; fill-opacity: 0.74; }
+      .faint { fill: #ffffff; fill-opacity: 0.5; }
+      .accent { fill: #ffd479; }
+      .ic { fill: none; stroke: #ffffff; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+      .ic-f { fill: none; stroke: #ffffff; stroke-opacity: 0.75; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+      .chev { fill: none; stroke: #ffffff; stroke-opacity: 0.55; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+      .t { font-family: Helvetica, Arial, sans-serif; }
+      .thin { font-weight: 200; }
+      .med { font-weight: 500; }
+      .semi { font-weight: 600; }
+      .cellhl { fill: #ffffff; fill-opacity: 0.07; }
+      .cellsel { fill: #ffd479; fill-opacity: 0.22; stroke: #ffd479; stroke-opacity: 0.55; }
+      .d-major { fill: #ff9f5a; }
+      .d-notable { fill: #ffd479; }
+      .tag { fill: #ffffff; fill-opacity: 0.12; stroke: #ffffff; stroke-opacity: 0.2; }
+      .sep { stroke: #ffffff; stroke-opacity: 0.12; stroke-width: 1; }
+    </style>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1100" height="2600" fill="url(#sky)"/>
+  <rect width="1100" height="2600" fill="url(#glow)"/>
+  <g fill="#ffffff" opacity="0.55">
+    <circle cx="150" cy="90" r="1.6"/><circle cx="360" cy="60" r="1.2"/><circle cx="640" cy="120" r="1.4"/>
+    <circle cx="880" cy="80" r="1.3"/><circle cx="1000" cy="150" r="1.1"/><circle cx="80" cy="240" r="1.2"/>
+    <circle cx="980" cy="300" r="1.3"/><circle cx="220" cy="360" r="1"/><circle cx="1030" cy="470" r="1.3"/>
+  </g>
+
+  <!-- Topbar -->
+  <circle cx="212" cy="58" r="6" fill="#ffd479"/>
+  <text x="230" y="64" font-size="17" class="t semi soft">Horizon</text>
+  <circle cx="872" cy="58" r="20" class="glass-soft"/>
+  <path d="M872 66s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z" class="ic" transform="translate(0,0)"/>
+  <circle cx="928" cy="58" r="20" class="glass-soft"/>
+  <path d="M922 52v12h4l5 5V47l-5 5h-4z" class="ic"/>
+
+  <!-- Search -->
+  <rect x="190" y="98" width="720" height="58" rx="29" class="glass-soft"/>
+  <circle cx="226" cy="127" r="7" class="ic"/>
+  <path d="M231 132l5 5" class="ic"/>
+  <text x="250" y="133" font-size="16" class="t faint">Search for a city…</text>
+  <rect x="742" y="108" width="156" height="38" rx="19" fill="url(#cta)"/>
+  <text x="820" y="132" text-anchor="middle" font-size="14.5" class="t semi" fill="#3a2600">Get Horizon</text>
+
+  <!-- Hero -->
+  <g transform="translate(550 214)" stroke="#ffd479" stroke-width="1.5" fill="none" stroke-linecap="round">
+    <circle r="15"/>
+    <path d="M0 -30v-8M0 30v8M-30 0h-8M30 0h8M-21 -21l-6 -6M21 21l6 6M21 -21l6 -6M-21 21l-6 6"/>
+  </g>
+  <text x="550" y="300" text-anchor="middle" font-size="30" class="t med ink">Hyderabad, India</text>
+  <text x="538" y="408" text-anchor="end" font-size="108" class="t thin ink">06:00</text>
+  <text x="550" y="408" text-anchor="start" font-size="60" class="t thin ink" opacity="0.82">–07:00</text>
+  <text x="550" y="452" text-anchor="middle" font-size="13" letter-spacing="3" class="t soft">BEST TIME TO GO OUTSIDE</text>
+  <text x="550" y="486" text-anchor="middle" font-size="16" class="t soft">Clear sky · 24° · feels 27°</text>
+
+  <!-- Score ring -->
+  <g transform="translate(550 580) rotate(-90)">
+    <circle r="42" fill="none" stroke="#ffffff" stroke-opacity="0.16" stroke-width="8"/>
+    <circle r="42" fill="none" stroke="#ffd479" stroke-width="8" stroke-linecap="round"
+            stroke-dasharray="263.9" stroke-dashoffset="39.6"/>
+  </g>
+  <text x="550" y="589" text-anchor="middle" font-size="27" class="t thin ink">85</text>
+  <text x="550" y="650" text-anchor="middle" font-size="12" letter-spacing="2" class="t faint">OUTSIDE SCORE</text>
+
+  <!-- Hourly -->
+  <rect x="190" y="676" width="720" height="156" rx="26" class="glass"/>
+  <text x="216" y="710" font-size="12" letter-spacing="2.5" class="t semi faint">HOURLY OUTLOOK · TAP AN HOUR</text>
+  <g class="t">
+    <!-- now -->
+    <rect x="214" y="724" width="62" height="92" rx="16" fill="#ffffff" fill-opacity="0.14" stroke="#ffffff" stroke-opacity="0.18"/>
+    <text x="245" y="746" text-anchor="middle" font-size="12" class="soft">Now</text>
+    <g transform="translate(245 770)" stroke="#ffd479" stroke-width="1.4" fill="none" stroke-linecap="round"><circle r="6"/><path d="M0 -10v-3M0 10v3M-10 0h-3M10 0h3"/></g>
+    <text x="245" y="796" text-anchor="middle" font-size="15" class="t semi ink">73</text>
+    <text x="245" y="810" text-anchor="middle" font-size="12" class="faint">24°</text>
+    <!-- 01 -->
+    <rect x="284" y="724" width="62" height="92" rx="16" fill="#ffffff" fill-opacity="0.06"/>
+    <text x="315" y="746" text-anchor="middle" font-size="12" class="soft">01:00</text>
+    <g transform="translate(315 770)" class="ic-f"><circle r="6"/><path d="M-6 3a5 5 0 0 0 0 0"/></g>
+    <text x="315" y="796" text-anchor="middle" font-size="15" class="t semi ink">74</text>
+    <text x="315" y="810" text-anchor="middle" font-size="12" class="faint">24°</text>
+    <!-- 02 -->
+    <rect x="354" y="724" width="62" height="92" rx="16" fill="#ffffff" fill-opacity="0.06"/>
+    <text x="385" y="746" text-anchor="middle" font-size="12" class="soft">02:00</text>
+    <g transform="translate(385 770)" class="ic-f"><circle r="6"/></g>
+    <text x="385" y="796" text-anchor="middle" font-size="15" class="t semi ink">75</text>
+    <text x="385" y="810" text-anchor="middle" font-size="12" class="faint">23°</text>
+    <!-- 03 -->
+    <rect x="424" y="724" width="62" height="92" rx="16" fill="#ffffff" fill-opacity="0.06"/>
+    <text x="455" y="746" text-anchor="middle" font-size="12" class="soft">03:00</text>
+    <g transform="translate(455 770)" class="ic-f"><circle r="6"/></g>
+    <text x="455" y="796" text-anchor="middle" font-size="15" class="t semi ink">76</text>
+    <text x="455" y="810" text-anchor="middle" font-size="12" class="faint">23°</text>
+    <!-- 04 -->
+    <rect x="494" y="724" width="62" height="92" rx="16" fill="#ffffff" fill-opacity="0.06"/>
+    <text x="525" y="746" text-anchor="middle" font-size="12" class="soft">04:00</text>
+    <g transform="translate(525 770)" class="ic-f"><circle r="6"/></g>
+    <text x="525" y="796" text-anchor="middle" font-size="15" class="t semi ink">78</text>
+    <text x="525" y="810" text-anchor="middle" font-size="12" class="faint">23°</text>
+    <!-- 05 -->
+    <rect x="564" y="724" width="62" height="92" rx="16" fill="#ffffff" fill-opacity="0.06"/>
+    <text x="595" y="746" text-anchor="middle" font-size="12" class="soft">05:00</text>
+    <g transform="translate(595 770)" class="ic-f"><circle r="6"/><path d="M0 -10v-3M0 10v3M-10 0h-3M10 0h3"/></g>
+    <text x="595" y="796" text-anchor="middle" font-size="15" class="t semi ink">82</text>
+    <text x="595" y="810" text-anchor="middle" font-size="12" class="faint">24°</text>
+    <!-- 06 best -->
+    <rect x="634" y="724" width="62" height="92" rx="16" fill="#ffd479" fill-opacity="0.3" stroke="#ffd479" stroke-opacity="0.6"/>
+    <text x="665" y="746" text-anchor="middle" font-size="12" class="t semi" fill="#ffd479">06:00</text>
+    <g transform="translate(665 770)" stroke="#ffd479" stroke-width="1.4" fill="none" stroke-linecap="round"><circle r="6"/><path d="M0 -10v-3M0 10v3M-10 0h-3M10 0h3"/></g>
+    <text x="665" y="796" text-anchor="middle" font-size="15" class="t semi" fill="#ffd479">85</text>
+    <text x="665" y="810" text-anchor="middle" font-size="12" class="faint">24°</text>
+  </g>
+
+  <!-- Row 1: Sun + Moon -->
+  <rect x="190" y="848" width="353" height="196" rx="18" class="glass"/>
+  <g transform="translate(212 872)"><path d="M0 0h15M7 -3l-3 -3M7 -3l-3 3" class="ic-f" transform="translate(158,10)"/></g>
+  <text x="212" y="878" font-size="11.5" letter-spacing="2" class="t semi faint">SUN</text>
+  <path class="chev" d="M516 872l6 6 6-6"/>
+  <text x="212" y="918" font-size="14" class="soft">Sunrise</text><text x="522" y="918" text-anchor="end" font-size="15" class="t semi ink">06:08</text>
+  <text x="212" y="950" font-size="14" class="soft">Sunset</text><text x="522" y="950" text-anchor="end" font-size="15" class="t semi ink">17:58</text>
+  <path d="M222 1018 A 150 150 0 0 1 512 1018" fill="none" stroke="#ffffff" stroke-opacity="0.22" stroke-width="3" stroke-linecap="round"/>
+  <path d="M222 1018 A 150 150 0 0 1 330 900" fill="none" stroke="#ffd479" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="330" cy="900" r="5" fill="#ffd479"/>
+
+  <rect x="557" y="848" width="353" height="196" rx="18" class="glass"/>
+  <text x="579" y="878" font-size="11.5" letter-spacing="2" class="t semi faint">MOON</text>
+  <path class="chev" d="M878 872l6 6 6-6"/>
+  <text x="579" y="914" font-size="26" class="t ink">New Moon</text>
+  <text x="579" y="942" font-size="13" class="faint">0% illuminated</text>
+  <rect x="579" y="952" width="309" height="6" rx="3" fill="#ffffff" fill-opacity="0.16"/>
+  <text x="579" y="988" font-size="14" class="soft">Rises</text><text x="890" y="988" text-anchor="end" font-size="15" class="t semi ink">05:38</text>
+  <text x="579" y="1020" font-size="14" class="soft">Sets</text><text x="890" y="1020" text-anchor="end" font-size="15" class="t semi ink">17:36</text>
+
+  <!-- Row 2: Planets + Overhead -->
+  <rect x="190" y="1058" width="353" height="196" rx="18" class="glass"/>
+  <text x="212" y="1088" font-size="11.5" letter-spacing="2" class="t semi faint">PLANETS</text>
+  <path class="chev" d="M516 1082l6 6 6-6"/>
+  <text x="212" y="1128" font-size="14" class="soft">Venus</text><text x="522" y="1128" text-anchor="end" font-size="15" class="t semi ink">W · 14°</text>
+  <text x="212" y="1160" font-size="14" class="soft">Jupiter</text><text x="522" y="1160" text-anchor="end" font-size="15" class="t semi ink">SE · 22°</text>
+  <text x="212" y="1192" font-size="14" class="soft">Saturn</text><text x="522" y="1192" text-anchor="end" font-size="15" class="t semi ink">S · 31°</text>
+
+  <rect x="557" y="1058" width="353" height="196" rx="18" class="glass"/>
+  <text x="579" y="1088" font-size="11.5" letter-spacing="2" class="t semi faint">OVERHEAD</text>
+  <path class="chev" d="M878 1082l6 6 6-6"/>
+  <g class="t">
+    <rect x="579" y="1104" width="112" height="30" rx="15" fill="#ffffff" fill-opacity="0.1"/><text x="635" y="1124" text-anchor="middle" font-size="12.5" class="ink">Andromeda</text>
+    <rect x="699" y="1104" width="92" height="30" rx="15" fill="#ffffff" fill-opacity="0.1"/><text x="745" y="1124" text-anchor="middle" font-size="12.5" class="ink">Pegasus</text>
+    <rect x="579" y="1142" width="112" height="30" rx="15" fill="#ffffff" fill-opacity="0.1"/><text x="635" y="1162" text-anchor="middle" font-size="12.5" class="ink">Cassiopeia</text>
+    <rect x="699" y="1142" width="92" height="30" rx="15" fill="#ffffff" fill-opacity="0.1"/><text x="745" y="1162" text-anchor="middle" font-size="12.5" class="ink">Perseus</text>
+    <rect x="579" y="1180" width="92" height="30" rx="15" fill="#ffffff" fill-opacity="0.1"/><text x="625" y="1200" text-anchor="middle" font-size="12.5" class="ink">Taurus</text>
+  </g>
+
+  <!-- Conditions (wide) -->
+  <rect x="190" y="1268" width="720" height="168" rx="18" class="glass"/>
+  <text x="216" y="1300" font-size="11.5" letter-spacing="2" class="t semi faint">CONDITIONS AT THE BEST WINDOW</text>
+  <path class="chev" d="M878 1294l6 6 6-6"/>
+  <g class="t">
+    <text x="216" y="1338" font-size="12" class="faint">TEMP</text><text x="216" y="1368" font-size="22" class="ink">24°</text>
+    <text x="336" y="1338" font-size="12" class="faint">FEELS</text><text x="336" y="1368" font-size="22" class="ink">27°</text>
+    <text x="456" y="1338" font-size="12" class="faint">RAIN</text><text x="456" y="1368" font-size="22" class="ink">0%</text>
+    <text x="576" y="1338" font-size="12" class="faint">WIND</text><text x="576" y="1368" font-size="22" class="ink">4 km/h</text>
+    <text x="720" y="1338" font-size="12" class="faint">CLOUD</text><text x="720" y="1368" font-size="22" class="ink">0%</text>
+    <text x="828" y="1338" font-size="12" class="faint">UV</text><text x="828" y="1368" font-size="22" class="ink">0</text>
+  </g>
+
+  <!-- Meteors (wide) -->
+  <rect x="190" y="1450" width="720" height="128" rx="18" class="glass"/>
+  <text x="216" y="1482" font-size="11.5" letter-spacing="2" class="t semi faint">METEOR SHOWERS</text>
+  <path class="chev" d="M878 1476l6 6 6-6"/>
+  <text x="216" y="1514" font-size="14" class="soft">Orionids · active</text>
+  <rect x="600" y="1494" width="286" height="30" rx="15" fill="#ff9f5a" fill-opacity="0.18" stroke="#ff9f5a" stroke-opacity="0.5"/>
+  <text x="743" y="1514" text-anchor="middle" font-size="12.5" fill="#ffcf9c" class="t">Orionids · Oct 02–Nov 07</text>
+  <text x="216" y="1552" font-size="12.5" class="faint">Swift meteors from Halley's Comet, best in the hours before dawn.</text>
+
+  <!-- Alert -->
+  <rect x="190" y="1592" width="720" height="150" rx="26" class="glass"/>
+  <text x="216" y="1624" font-size="11.5" letter-spacing="2" class="t semi faint">TODAY'S ALERT</text>
+  <text x="216" y="1654" font-size="15" class="t soft">Best window: 06:00–07:00 (clear sky, 24°C, 0% rain chance, score 85/100).</text>
+  <text x="216" y="1680" font-size="15" class="t soft">Look up for sunrise at 06:08, a New Moon, and Andromeda and Pegasus</text>
+  <text x="216" y="1706" font-size="15" class="t soft">riding high overhead. A very good morning to step outside.</text>
+
+  <!-- Put the phone away -->
+  <rect x="190" y="1756" width="720" height="128" rx="26" fill="#ffd479" fill-opacity="0.22" stroke="#ffc882" stroke-opacity="0.5"/>
+  <rect x="214" y="1782" width="46" height="46" rx="14" fill="#000000" fill-opacity="0.22" stroke="#ffdca0" stroke-opacity="0.4"/>
+  <g transform="translate(237 1805)" stroke="#ffd9a4" stroke-width="1.7" fill="none" stroke-linecap="round">
+    <path d="M-9 -9L9 9"/><path d="M-5 -3C-3 2 2 7 6 8l2-2c1-1 2-1 3 0l3 1c1 1 2 2 2 3v2"/>
+  </g>
+  <text x="278" y="1798" font-size="12" letter-spacing="3" class="t semi" fill="#ffe0b3">PUT THE PHONE AWAY</text>
+  <text x="278" y="1830" font-size="19" class="t thin" fill="#fff6e6">Put the phone in your pocket at 06:00, step outside,</text>
+  <text x="278" y="1856" font-size="19" class="t thin" fill="#fff6e6">and give the sky two unhurried minutes.</text>
+
+  <!-- Sky calendar (interactive) -->
+  <rect x="190" y="1908" width="720" height="560" rx="26" class="glass"/>
+  <text x="216" y="1940" font-size="11.5" letter-spacing="2" class="t semi faint">SKY CALENDAR</text>
+  <circle cx="838" cy="1934" r="17" class="glass-soft"/>
+  <text x="838" y="1941" text-anchor="middle" font-size="18" class="t soft">‹</text>
+  <circle cx="884" cy="1934" r="17" class="glass-soft"/>
+  <text x="884" y="1941" text-anchor="middle" font-size="18" class="t soft">›</text>
+  <text x="216" y="1982" font-size="17" class="t med ink">October 2026</text>
+
+  <!-- Weekday header -->
+  <g class="t" font-size="10.5" letter-spacing="1">
+    <text x="264" y="2010" text-anchor="middle" class="faint">SUN</text>
+    <text x="359" y="2010" text-anchor="middle" class="faint">MON</text>
+    <text x="455" y="2010" text-anchor="middle" class="faint">TUE</text>
+    <text x="550" y="2010" text-anchor="middle" class="faint">WED</text>
+    <text x="645" y="2010" text-anchor="middle" class="faint">THU</text>
+    <text x="741" y="2010" text-anchor="middle" class="faint">FRI</text>
+    <text x="836" y="2010" text-anchor="middle" class="faint">SAT</text>
+  </g>
+
+  <!-- Day cells (October 2026 starts Thursday). Important dates highlighted. -->
+  <g class="t" font-size="14.5">
+    <!-- Row 1 -->
+    <text x="645" y="2042" text-anchor="middle" class="soft">1</text>
+    <text x="741" y="2042" text-anchor="middle" class="soft">2</text>
+    <text x="836" y="2042" text-anchor="middle" class="soft">3</text>
+    <!-- Row 2 -->
+    <text x="264" y="2096" text-anchor="middle" class="soft">4</text>
+    <text x="359" y="2096" text-anchor="middle" class="soft">5</text>
+    <text x="455" y="2096" text-anchor="middle" class="soft">6</text>
+    <text x="550" y="2096" text-anchor="middle" class="soft">7</text>
+    <text x="645" y="2096" text-anchor="middle" class="soft">8</text>
+    <text x="741" y="2096" text-anchor="middle" class="soft">9</text>
+    <rect x="803" y="2074" width="66" height="50" rx="14" class="cellhl"/>
+    <text x="836" y="2092" text-anchor="middle" class="ink">10</text>
+    <circle cx="836" cy="2112" r="3.5" class="d-notable"/>
+    <!-- Row 3 -->
+    <text x="264" y="2150" text-anchor="middle" class="soft">11</text>
+    <text x="359" y="2150" text-anchor="middle" class="soft">12</text>
+    <text x="455" y="2150" text-anchor="middle" class="soft">13</text>
+    <text x="550" y="2150" text-anchor="middle" class="soft">14</text>
+    <text x="645" y="2150" text-anchor="middle" class="soft">15</text>
+    <text x="741" y="2150" text-anchor="middle" class="soft">16</text>
+    <text x="836" y="2150" text-anchor="middle" class="soft">17</text>
+    <!-- Row 4 -->
+    <text x="264" y="2204" text-anchor="middle" class="soft">18</text>
+    <text x="359" y="2204" text-anchor="middle" class="soft">19</text>
+    <text x="455" y="2204" text-anchor="middle" class="soft">20</text>
+    <rect x="422" y="2182" width="66" height="50" rx="14" class="cellsel"/>
+    <text x="455" y="2200" text-anchor="middle" class="ink">21</text>
+    <circle cx="455" cy="2220" r="3.5" class="d-major"/>
+    <text x="550" y="2204" text-anchor="middle" class="soft">22</text>
+    <text x="645" y="2204" text-anchor="middle" class="soft">23</text>
+    <text x="741" y="2204" text-anchor="middle" class="soft">24</text>
+    <!-- Row 5 -->
+    <text x="264" y="2258" text-anchor="middle" class="soft">25</text>
+    <rect x="326" y="2236" width="66" height="50" rx="14" class="cellhl"/>
+    <text x="359" y="2254" text-anchor="middle" class="ink">26</text>
+    <circle cx="359" cy="2274" r="3.5" class="d-notable"/>
+    <text x="455" y="2258" text-anchor="middle" class="soft">27</text>
+    <text x="550" y="2258" text-anchor="middle" class="soft">28</text>
+    <text x="645" y="2258" text-anchor="middle" class="soft">29</text>
+    <text x="741" y="2258" text-anchor="middle" class="soft">30</text>
+    <text x="836" y="2258" text-anchor="middle" class="soft">31</text>
+  </g>
+
+  <!-- Selected-day detail -->
+  <line class="sep" x1="216" y1="2322" x2="884" y2="2322"/>
+  <text x="216" y="2348" font-size="13" class="t faint">Wednesday, October 21, 2026</text>
+  <rect x="216" y="2360" width="62" height="20" rx="10" class="tag"/>
+  <text x="247" y="2374" text-anchor="middle" font-size="10" letter-spacing="1" class="t soft">METEOR</text>
+  <text x="290" y="2375" font-size="14" class="t semi ink">Orionids meteor shower peaks</text>
+  <text x="216" y="2402" font-size="13" class="t soft">Up to ~20 meteors/hour at the peak. Swift meteors from Halley's</text>
+  <text x="216" y="2422" font-size="13" class="t soft">Comet, best in the hours before dawn. Look towards Orion.</text>
+
+  <!-- Footer -->
+  <text x="216" y="2516" font-size="11.5" class="t faint">Horizon · Hacktoberfest 2026 · Touch Grass</text>
+  <text x="884" y="2516" text-anchor="end" font-size="11.5" class="t faint">Powered by Gemma · ElevenLabs · MongoDB Atlas · Render · Sentry · SQLite</text>
+</svg>

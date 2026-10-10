@@ -1,0 +1,17 @@
+# Normalise line endings in the repo; keep the checked-out files native on Windows.
+* text=auto eol=lf
+
+# Binary-ish assets (avoid noisy diffs / line-ending mangling).
+*.bsp binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.mp3 binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+
+# Locking / generated files.
+*.lock  linguist-generated

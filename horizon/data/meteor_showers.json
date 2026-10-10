@@ -1,0 +1,90 @@
+[
+  {
+    "name": "Quadrantids",
+    "peak": "01-03",
+    "active": "Dec 28 - Jan 12",
+    "zhr": 110,
+    "radiant": "Boötes",
+    "description": "Sharp, short peak. Best after midnight; can produce bright fireballs."
+  },
+  {
+    "name": "Lyrids",
+    "peak": "04-22",
+    "active": "Apr 16 - Apr 25",
+    "zhr": 18,
+    "radiant": "Lyra",
+    "description": "One of the oldest recorded showers, with occasional bright fireballs."
+  },
+  {
+    "name": "Eta Aquariids",
+    "peak": "05-06",
+    "active": "Apr 19 - May 28",
+    "zhr": 50,
+    "radiant": "Aquarius",
+    "description": "Fast meteors from Halley's Comet debris, best before dawn."
+  },
+  {
+    "name": "Southern Delta Aquariids",
+    "peak": "07-30",
+    "active": "Jul 12 - Aug 23",
+    "zhr": 25,
+    "radiant": "Aquarius",
+    "description": "Steady Southern-Hemisphere shower; overlaps the early Perseids."
+  },
+  {
+    "name": "Perseids",
+    "peak": "08-12",
+    "active": "Jul 17 - Aug 24",
+    "zhr": 100,
+    "radiant": "Perseus",
+    "description": "The classic summer shower — bright, plentiful meteors on warm nights."
+  },
+  {
+    "name": "Orionids",
+    "peak": "10-21",
+    "active": "Oct 02 - Nov 07",
+    "zhr": 20,
+    "radiant": "Orion",
+    "description": "Swift meteors from Halley's Comet, best in the hours before dawn."
+  },
+  {
+    "name": "Southern Taurids",
+    "peak": "11-05",
+    "active": "Sep 10 - Nov 20",
+    "zhr": 5,
+    "radiant": "Taurus",
+    "description": "Low rate but famous for slow, bright fireballs."
+  },
+  {
+    "name": "Northern Taurids",
+    "peak": "11-12",
+    "active": "Oct 20 - Dec 10",
+    "zhr": 5,
+    "radiant": "Taurus",
+    "description": "Fireball-rich stream that overlaps the Leonids."
+  },
+  {
+    "name": "Leonids",
+    "peak": "11-17",
+    "active": "Nov 06 - Nov 30",
+    "zhr": 15,
+    "radiant": "Leo",
+    "description": "Fast meteors; historically capable of spectacular storms."
+  },
+  {
+    "name": "Geminids",
+    "peak": "12-14",
+    "active": "Dec 04 - Dec 17",
+    "zhr": 150,
+    "radiant": "Gemini",
+    "description": "The year's best shower: bright, slow, colorful meteors all night."
+  },
+  {
+    "name": "Ursids",
+    "peak": "12-22",
+    "active": "Dec 17 - Dec 26",
+    "zhr": 10,
+    "radiant": "Ursa Minor",
+    "description": "A quiet northern shower close to the winter solstice."
+  }
+]

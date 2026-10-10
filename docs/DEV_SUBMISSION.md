@@ -1,0 +1,190 @@
+# 🌇 Horizon — the best time to step outside, and what the sky has waiting
+
+> **This is a submission for the [Hacktoberfest Open-Source AI Challenge, Week 1: Touch Grass](https://dev.to/challenges/hacktoberfest-week1-2026-10-05).**
+> `#hf26challenge` `#devchallenge` `#hacktoberfest` `#opensource` `#ai`
+
+![Horizon web UI](./screenshot.svg)
+
+**Repository:** `https://github.com/<your-user>/horizon`  ·  **Live demo:** `https://horizon-<you>.onrender.com`
+
+---
+
+## What I built
+
+**Horizon** is a daily outside alert and sky-event planner. You press one
+button; it looks at the weather and the night sky for your location and gives
+you back a short, friendly message:
+
+- the **best 1–3 hour window** to be outside today,
+- the **key conditions** (temperature, rain chance, wind, cloud, UV),
+- **2–4 sky things to look for** (sunset, the Moon, planets, constellations,
+  meteor showers),
+- a **sky calendar** of the months ahead — only the dates worth planning around
+  are highlighted (new/full moons, major meteor peaks, equinoxes & solstices,
+  planet oppositions), each opening a short explanation, and
+- one gentle **"put the phone away"** nudge.
+
+Then it tells you to close the tab and go actually look up.
+
+**The short interaction is the point.** Horizon is a pull, not an endless feed:
+one question in, one real-world experience out. That's the whole "Touch Grass"
+spirit.
+
+## Who it's for
+
+Anyone who wants to get outside more but doesn't want another app to scroll.
+Specifically:
+
+- **Busy people** who need a single sentence — *"go out at 6 p.m."* — not a
+  dashboard.
+- **Casual stargazers** who don't know what's overhead tonight but would love a
+  reason to look.
+- **Walkers, runners and people who work from home**, who benefit from a nudge
+  at the nicest, clearest part of the day.
+
+## Demo
+
+- **Try it:** `https://horizon-<you>.onrender.com` *(Render deploy)*
+- **Screenshot:** above (the whole experience is one screen and one tap)
+- **Live example output:** [`examples/sample_alert.md`](../examples/sample_alert.md)
+
+A real run for Hyderabad produced:
+
+```
+Your best outside window is 04:00-07:00
+Weather     : Clear sky, 26°C (feels 27°C), 0% chance of rain, wind 5 km/h, 0% cloud.
+Sun         : up 06:08 / down 17:58
+Moon        : New Moon (0% lit) — dark skies, ideal for stargazing
+Look up for : Aquila, Lyra, Cygnus, Sagittarius, Pegasus
+```
+
+It picked the pre-dawn block because a **New Moon + clear sky** is the darkest,
+starriest part of the day — the windowing deliberately balances comfort with
+*what the sky has worth looking at*.
+
+## How it works
+
+The project is a small **agent pipeline**, one stage per concern:
+
+```
+location → sky → weather → news → narration → (voice) → storage
+```
+
+| Stage | What it does | Built with |
+|-------|--------------|-----------|
+| Location | city → lat/long, cached | Open-Meteo geocoding |
+| Sky | sunrise/sunset, twilight, Moon phase + rise/set, planets, constellations, meteor showers | **Skyfield** |
+| Calendar | next few months of new/full moons, meteor peaks, seasons, oppositions | **Skyfield** |
+| Weather | scores every 1–3h block for comfort + clear skies, picks the best window | **Open-Meteo** |
+| News | rare sky-event headlines | **SerpApi** |
+| Narration | turns the facts into a warm, human alert | **Gemma** |
+| Voice | a spoken version of the alert | **ElevenLabs** |
+| Storage | location prefs + alert history | **MongoDB Atlas** |
+| Tracing | one transaction per alert, one span per stage | **Sentry** |
+
+The core experience needs **no API key and no paid service**: Open-Meteo and
+Skyfield supply the data, and Gemma runs **locally via Ollama** by default. Every
+partner integration is optional and auto-detected — if a key isn't present,
+Horizon falls back to a deterministic template narrator and a local SQLite store
+instead of failing.
+
+*(Full setup, API reference and architecture diagrams: see the [README](../README.md).)*
+
+## Why open innovation matters
+
+Horizon is deliberately built so that **the useful part doesn't depend on a
+gatekeeper**.
+
+**1. Open data makes a real product possible for free.** Weather and astronomy
+are public knowledge. Open-Meteo and Skyfield let a weekend builder compute a
+genuinely useful recommendation — sunrise, Moon phase, where Jupiter is — without
+a billing account. When the raw ingredients are open, the barrier to *building*
+drops to an idea and a laptop.
+
+**2. Open weights keep the intelligence inspectable.** The narration is the part
+most likely to hide bias or leak data, so it's the part I made most transparent:
+Gemma can run entirely on my machine through Ollama. No prompt leaves the
+device, the model can be swapped, and anyone can reproduce the exact output. A
+closed, unmetered black box would have been easier — and less trustworthy.
+
+**3. Open source makes small tools durable.** Horizon is MIT-licensed and modular.
+If Open-Meteo ever changes, swapping the weather stage is one file. If a better
+open model appears tomorrow, it's a one-line `LLM_PROVIDER` change. That
+resilience is the practical case for open innovation: not ideology, but software
+that keeps working and keeps belonging to its users.
+
+**4. And it keeps the human in the loop.** The most important output of Horizon
+isn't a model response — it's *you, outside*. Open tooling let me spend the build
+budget on that goal instead of on API quotas.
+
+## Prize Categories
+
+**Best Use of Gemma** — Horizon uses **Gemma** to turn raw weather + sky data into
+natural, friendly daily alerts. It runs locally through **Ollama** (open weights,
+no key) and also supports hosted Gemma via OpenRouter, Google AI Studio, and the
+Hugging Face router. If no model is reachable, a deterministic template narrator
+keeps the app working. (`horizon/llm.py`, `horizon/narrator.py`)
+
+**Best Use of ElevenLabs** — The daily alert is also rendered as a short **spoken**
+narration so you can listen while you get ready to go outside. Generated audio is
+cached by content hash and served from the app. (`horizon/voice.py`)
+
+**Best Use of DigitalOcean** — The repo ships a **Dockerfile** and a DigitalOcean
+**App Platform** spec (`.do/app.yaml`) with a `/api/health` health check.
+
+**Best Use of Render** — A Render **Blueprint** (`render.yaml`) deploys the same
+service, and this submission's live demo is hosted on Render.
+
+**Best Use of MongoDB Atlas** — With `MONGODB_URI` set, **Atlas** stores location
+preferences and a rolling history of generated alerts (SQLite fallback for local
+demos). `Storage.search_history()` is the extension point for **Atlas Vector
+Search**. (`horizon/storage.py`)
+
+**Best Use of SerpApi** — **SerpApi** adds recent astronomy / rare-sky-event
+headlines to the alert, so Horizon can say "…and there's news about X tonight."
+(`horizon/news.py`)
+
+**Best Use of Sentry** — The whole agent is **traced with Sentry**: one
+transaction per alert with a span per stage (location, sky, weather, news,
+narration, voice, storage) plus captured exceptions. (`horizon/agent.py`)
+
+**Open-source + open-weight core:** no paid API is required for the core
+functionality — Open-Meteo (weather), Skyfield (astronomy), and Gemma (narration).
+
+## The agent session
+
+<!-- Replace with your DevRelay / session link. -->
+
+Horizon was built in a single agent session. The link to the session (and the
+prompts that produced each module) goes here:
+
+> **Agent session:** `<paste your DevRelay / OpenCode session link here>`
+
+If you'd like to reproduce the build, the repository history and this write-up
+cover the same steps end to end.
+
+## Engineering quality
+
+- **84 offline unit tests** at **~95% coverage** (`pytest --cov`) — every network
+  partner is monkeypatched, so the suite runs in about a second on a plane.
+- **CI on GitHub Actions** (Python 3.10–3.12): `ruff` lint + format and the full
+  test suite, plus a packaging smoke test.
+- **Graceful degradation everywhere**: no API key, no problem — the pipeline
+  falls back to the template narrator and SQLite rather than erroring.
+- A one-file run-by-run step-by-step **submission checklist** lives in
+  [`docs/SUBMISSION_CHECKLIST.md`](./SUBMISSION_CHECKLIST.md).
+
+## What's next
+
+- Push notifications at the start of the best window
+- A Telegram / WhatsApp bot ("send me my Horizon")
+- A red-light night mode for dark-adapted eyes
+- Aurora (NOAA Kp) and ISS-pass alerts
+- Atlas Vector Search over past alerts ("what did I see during last month's
+  meteor shower?")
+- Multi-day planner + iCal export of the highlighted sky calendar
+
+---
+
+*Built with open data, open weights, and the sincere hope that you close this tab
+and go outside. 🌿*

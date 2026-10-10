@@ -1,0 +1,26 @@
+# Render Blueprint — Best Use of Render partner category.
+# Deploy: push to GitHub, then "New +" -> "Blueprint" and point at this repo.
+services:
+  - type: web
+    name: horizon
+    runtime: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn horizon.main:app --host 0.0.0.0 --port $PORT"
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.6
+      - key: LLM_PROVIDER
+        value: auto
+      # Set the rest in the Render dashboard (marked sync:false = secret).
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: ELEVENLABS_API_KEY
+        sync: false
+      - key: SERPAPI_API_KEY
+        sync: false
+      - key: MONGODB_URI
+        sync: false
+      - key: SENTRY_DSN
+        sync: false

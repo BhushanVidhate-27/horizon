@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Horizon runtime caches (ephemeris, geocode cache, sqlite, audio)
+.cache/
+
+# Env
+.env
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

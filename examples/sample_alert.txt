@@ -1,0 +1,27 @@
+==============================================================
+  HORIZON  ·  Hyderabad
+==============================================================
+  17.384, 78.456  ·  Asia/Kolkata
+
+Your best outside window is 04:00-07:00
+
+Best window : 04:00 - 07:00 (score 87/100)
+Weather     : Clear sky, 26°C (feels 27°C), 0% chance of rain, wind 5 km/h, 0% cloud.
+
+Sun         : up 06:08 / down 17:58
+Moon        : New Moon (0% lit)
+Planets     : Mercury (WSW)
+Look up for : Aquila, Lyra, Cygnus, Sagittarius, Pegasus
+
+--------------------------------------------------------------
+Best window: 04:00-07:00 (clear sky, 26°C, 0% rain chance, score 87/100).
+Look up for:
+  • Sunset at 17:58 — Golden hour starts just before sunset — great light for a walk.
+  • New Moon (0% lit) — Rises 05:38, sets 17:36. Dark skies — ideal for stargazing.
+  • Mercury WSW at 11° — Bright enough to spot with the naked eye in the WSW sky.
+  • Aquila high overhead (SE) — Look for its bright star Altair.
+
+Put the phone in your pocket at 04:00, step outside, and give the sky two unhurried minutes. No filters needed.
+
+Providers   : host=local
+==============================================================

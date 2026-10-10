@@ -1,0 +1,38 @@
+# DigitalOcean App Platform spec — Best Use of DigitalOcean partner category.
+# Deploy: `doctl apps create --spec .do/app.yaml`
+# or App Platform -> Create App -> import this spec.
+name: horizon
+region: blr
+services:
+  - name: web
+    dockerfile_path: Dockerfile
+    source_dir: /
+    github:
+      repo: your-user/horizon
+      branch: main
+      deploy_on_push: true
+    http_port: 8080
+    instance_count: 1
+    instance_size_slug: apps-s-1vcpu-0.5gb
+    health_check:
+      http_path: /api/health
+    envs:
+      - key: PORT
+        value: "8080"
+      - key: LLM_PROVIDER
+        value: auto
+      - key: OPENROUTER_API_KEY
+        scope: RUN_TIME
+        type: SECRET
+      - key: ELEVENLABS_API_KEY
+        scope: RUN_TIME
+        type: SECRET
+      - key: SERPAPI_API_KEY
+        scope: RUN_TIME
+        type: SECRET
+      - key: MONGODB_URI
+        scope: RUN_TIME
+        type: SECRET
+      - key: SENTRY_DSN
+        scope: RUN_TIME
+        type: SECRET
