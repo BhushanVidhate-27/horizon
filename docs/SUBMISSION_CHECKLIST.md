@@ -15,7 +15,7 @@ Open-Source AI Challenge (Week 1: Touch Grass)** and onto DEV.
       `https://horizon-bhushanvidhate-27.onrender.com` — Render assigned exactly
       that subdomain (service `horizon-bhushanvidhate-27`), verified live:
       `/api/health` → 200, `/` → 200. No doc edits needed.
-- [ ] The repo shows the **MIT** license and a green CI badge.
+- [x] The repo shows the **MIT** license and a green CI badge.
 - [ ] Add topics: `hacktoberfest`, `touch-grass`, `astronomy`, `fastapi`,
       `gemma`, `open-meteo`, `skyfield`, `python`.
 
@@ -87,7 +87,8 @@ tags: devchallenge, hf26challenge, opensource, ai
 
 ## 6. Final sanity pass
 
-- [ ] `pytest` green on a clean checkout (CI enforces Python 3.10–3.12).
+- [x] `pytest` green on a clean checkout (CI enforces Python 3.10–3.12 —
+      verified green at commit `a92c6d8`).
 - [ ] No secrets in `git log` (`git grep -iE "sk-|api_key=|mongodb\+srv" $(git rev-list --all)`).
 - [ ] `.cache/`, `.venv/`, `.env` are **not** committed (see `.gitignore`).
 - [ ] Repo README opens with a screenshot a human can see in the first screen.
