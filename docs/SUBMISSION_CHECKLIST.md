@@ -11,10 +11,10 @@ Open-Source AI Challenge (Week 1: Touch Grass)** and onto DEV.
 - [x] `git init` and push a public GitHub repo named `horizon` (owner:
       `bhushanvidhate-27` — already set as `bhushanvidhate-27/horizon` in
       every badge, link and spec).
-- [ ] **Verify the live URL once Render deploys**: the demo links currently say
-      `https://horizon-bhushanvidhate-27.onrender.com` — replace that subdomain
-      with the exact one Render assigns in `README.md` and
-      `docs/DEV_SUBMISSION.md`.
+- [x] **Verify the live URL once Render deploys**: the demo links currently say
+      `https://horizon-bhushanvidhate-27.onrender.com` — Render assigned exactly
+      that subdomain (service `horizon-bhushanvidhate-27`), verified live:
+      `/api/health` → 200, `/` → 200. No doc edits needed.
 - [ ] The repo shows the **MIT** license and a green CI badge.
 - [ ] Add topics: `hacktoberfest`, `touch-grass`, `astronomy`, `fastapi`,
       `gemma`, `open-meteo`, `skyfield`, `python`.
@@ -40,7 +40,9 @@ make run            # http://localhost:8000
 - [ ] **DigitalOcean** *(optional, easiest $200 category this week — only
       ~2 rivals)*: `doctl apps create --spec .do/app.yaml`, then point the
       live demo there instead.
-- [ ] Copy the live URL into `README.md` and `docs/DEV_SUBMISSION.md`.
+- [x] Copy the live URL into `README.md` and `docs/DEV_SUBMISSION.md` (already
+      the documented `https://horizon-bhushanvidhate-27.onrender.com` — confirmed
+      against the deployed service).
 - [ ] Set partner secrets in the host dashboard (they are marked secret in both
       specs) — never commit them.
 
