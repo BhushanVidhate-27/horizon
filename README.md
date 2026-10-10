@@ -3,7 +3,7 @@
 [![CI](https://github.com/your-user/horizon/actions/workflows/ci.yml/badge.svg)](https://github.com/your-user/horizon/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](pyproject.toml)
-[![Tests](https://img.shields.io/badge/tests-83%20passing-brightgreen.svg)](#-tests)
+[![Tests](https://img.shields.io/badge/tests-84%20passing-brightgreen.svg)](#-tests)
 
 **A daily outside alert & sky event planner.** Horizon tells you the best time
 to step outside today, what interesting things are happening in the sky, and
@@ -73,7 +73,7 @@ horizon/
 │   ├── static/         # index.html, style.css, app.js
 │   └── data/           # meteor_showers.json
 ├── examples/           # sample text + markdown daily alert
-├── tests/              # offline unit tests (83, ~95% coverage)
+├── tests/              # offline unit tests (84, ~95% coverage)
 ├── docs/               # DEV submission draft + submission checklist
 ├── .github/            # CI workflow, issue + PR templates
 ├── Makefile            # make run / test / lint / fmt

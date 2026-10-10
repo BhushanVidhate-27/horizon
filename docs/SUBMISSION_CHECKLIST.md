@@ -19,7 +19,7 @@ Open-Source AI Challenge (Week 1: Touch Grass)** and onto DEV.
 
 ```bash
 make dev            # install runtime + dev deps
-make test           # 83+ tests, offline, ~1s
+make test           # 84+ tests, offline, ~1s
 make lint           # ruff clean
 make run            # http://localhost:8000
 ```

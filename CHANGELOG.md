@@ -16,7 +16,7 @@ on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
   with an on-disk cache, plus a precise → network-fallback geolocation flow.
 - `/api/health`, `/api/events`, `/api/history` and `/api/stats` endpoints.
 - GitHub Actions CI (lint + tests on Python 3.10–3.12 + a packaging smoke test).
-- Offline test suite expanded to ~83 tests (**~95% coverage**).
+- Offline test suite expanded to ~84 tests (**~95% coverage**).
 - `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, issue & PR templates.
 
 ### Fixed
